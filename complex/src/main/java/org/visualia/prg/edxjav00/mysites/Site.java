@@ -18,6 +18,20 @@ public class Site {
     private long fecha;
     private float valoracion;
 
+    @Override
+    public String toString() {
+        return "Site{" +
+                "nombre='" + nombre + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", posicion=" + posicion +
+                ", foto='" + foto + '\'' +
+                ", telefono=" + telefono +
+                ", url='" + url + '\'' +
+                ", comentario='" + comentario + '\'' +
+                ", fecha=" + fecha +
+                ", valoracion=" + valoracion +
+                '}';
+    }
     public Site(String nombre, String direccion, double longitud,
                 double latitud, int telefono, String url, String comentario,
                 int valoracion) {
@@ -36,6 +50,8 @@ public class Site {
 	public static void main(String[] args) {
 		Site NewSite = new Site ("URV Tecnica Tarragona","Campus Sescelades", 43,25, 977123456,
 				"http://www.urv.cat", "Zona avenida Catalunya",5);
+        System.out.println(NewSite);
+        System.out.println("----------------");
 		System.out.println(NewSite.fecha);
 		System.out.println(NewSite.posicion);
 		System.out.println(NewSite.nombre);

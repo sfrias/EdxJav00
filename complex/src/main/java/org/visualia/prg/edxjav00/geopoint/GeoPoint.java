@@ -35,10 +35,26 @@ public class GeoPoint {
         double c = 2*Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         return c * K_RadiusAverageEarth;
     }
+    public double getLongit() {
+        return longit;
+    }
+
+    public double getLatit() {
+        return latit;
+    }
+
+    public void setLongit(double longit) {
+        this.longit = longit;
+    }
+
+    public void setLatit(double latit) {
+        this.latit = latit;
+
     /*public static void main(String[] args) {
         GeoPoint place1, place2;
         place1 = new GeoPoint(123.03964, -45.3343);
         place2 = new GeoPoint(140.0001, 90.363246235);
         System.out.println("Distancia en metros: "+ place1.pathDist(place2));
     }*/
+    }
 }
